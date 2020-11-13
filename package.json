@@ -18,6 +18,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:dev": "concurrently \"npm start\" \"npm run json-server\"",
+    "json-server": "json-server --watch src/api/db.json --port 3001 --delay 1500",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +41,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/faker": "^5.1.4",
+    "@types/styled-components": "^5.1.4",
+    "@types/uuid": "^8.3.0",
+    "axios": "^0.21.0",
+    "bootstrap": "^4.5.3",
+    "concurrently": "^5.3.0",
+    "faker": "^5.1.0",
+    "json-server": "^0.16.2",
+    "react-bootstrap": "^1.4.0",
+    "styled-components": "^5.2.1",
+    "uuid": "^8.3.1"
   }
 }
